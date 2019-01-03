@@ -1,0 +1,47 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"A File Icon",
+		"All Autocomplete",
+		"AutoFileName",
+		"ColorPick",
+		"Docker Based Build Systems",
+		"Dockerfile Syntax Highlighting",
+		"Duplicate Lines",
+		"EditorConfig",
+		"FileFinder",
+		"Git",
+		"GitGutter",
+		"JSON Reindent",
+		"JsonTree",
+		"ModernPerl",
+		"Package Control",
+		"Perl Completions",
+		"perl-Test-More",
+		"PerlTidy",
+		"Preferences Editor",
+		"Rails Completions",
+		"ReIndent",
+		"RemoveDuplicateLines",
+		"Ruby Completions",
+		"Ruby Debugger",
+		"SelectionTools",
+		"SendCode",
+		"SublimeCodeIntel",
+		"SublimeLinter",
+		"SublimeLinter-contrib-perl",
+		"SublimeLinter-contrib-perlcritic",
+		"SublimeLinter-ruby",
+		"SublimeREPL",
+		"SyncedSideBar",
+		"tmux"
+	],
+	"repositories":
+	[
+		"https://github.com/tushortz/Perl-Completions"
+	]
+}
