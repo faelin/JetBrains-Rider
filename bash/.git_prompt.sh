@@ -28,8 +28,8 @@ print_git_branch_with_repo() {
 	parse_git_branch_with_repo | sed -E "s/^\[([^:]+)(:[^~+ ]+)(~[0-9]+)?(\+[0-9]+)?( )?(<[0-9]+>)?(\([0-9]+\))?\]$/$(echo -e " ${STYLE_BOLD}${COLOR_YELLOW}[${STYLE_RESET}\1${STYLE_BOLD}\2${COLOR_RED}\3${COLOR_GREEN}\4\5${COLOR_CYAN}\6${COLOR_PINK}\7${COLOR_YELLOW}]${COLOR_RESET}")/"
 }
  
-is_git_branch() {
- 	git branch 2> /dev/null
+basename_or_pwd() {
+ 	[ "$(git branch 2> /dev/null)" ] && basename $(pwd) || pwd
 }
  
 ### PS1 OPTIONS:
@@ -51,8 +51,8 @@ is_git_branch() {
 #
 #
 ##   EITHER basename [git_state] OR pwd (if not in a repo) $>
-export PS1='\[\033[1;34m`[ "$(is_git_branch)" ] && basename $(pwd) || pwd`\033[0m\]\[$(print_git_branch)\]\[\033[97m\] \$> \[\033[0m\]'
-#export PS1='\[\033[1;34m`[ "$(is_git_branch)" ] && basename $(pwd) || pwd`\033[0m\]\[$(print_git_branch_with_repo)\]\[\033[97m\] \$> \[\033[0m\]'
+export PS1='\[\033[1;34m\]$(basename_or_pwd)\[\033[0m\]$(print_git_branch)\[\033[97m\] \$> \[\033[0m\]'
+#export PS1='\[\033[1;34m\]$(basename_or_pwd)\[\033[0m\]$(print_git_branch_with_repo)\[\033[97m\] \$> \[\033[0m\]'
 #
 # 
 ##   pwd [git_state] $>
