@@ -1,0 +1,14 @@
+<application>
+  <component name="ActionMacroManager">
+    <macro name="q">
+      <action id="SurroundWithLiveTemplate" />
+      <typing text-keycode="81:0">q</typing>
+      <shortuct text="ENTER" />
+    </macro>
+    <macro name="qq">
+      <action id="SurroundWithLiveTemplate" />
+      <typing text-keycode="81:0;81:0">qq</typing>
+      <shortuct text="ENTER" />
+    </macro>
+  </component>
+</application>
